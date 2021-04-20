@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BusterNet &mdash; Demo [D[D[D[D[C1.0]:0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Demo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../2020/index.html">2020年</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">关于</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Demo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>BusterNet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/demo/BusterNet.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="busternet">
+<h1>BusterNet<a class="headerlink" href="#busternet" title="永久链接至标题">¶</a></h1>
+<p>Detecting Copy-Move Image Forgery with Source/Target Localization</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h2>
+<p>We introduce a novel deep neural architecture for image copy-move forgery detection (CMFD), code-named <em>BusterNet</em>. Unlike previous efforts, BusterNet is a pure, end-to-end trainable, deep neural network solution. It features a two-branch architecture followed by a fusion module. The two branches localize potential manipulation regions via visual artifacts and copy-move regions via visual similarities, respectively. To the best of our knowledge, this is the first CMFD algorithm with discernibility to localize source/target regions.</p>
+<p>In this repository, we release many paper related things, including</p>
+<ul class="simple">
+<li><p>a pretrained BusterNet model</p></li>
+<li><p>custom layers implemented in keras-tensorflow</p></li>
+<li><p>CASIA-CMFD, CoMoFoD-CMFD, and USCISI-CMFD dataset</p></li>
+<li><p>python notebook to reproduce paper results</p></li>
+</ul>
+</div>
+<div class="section" id="repo-organization">
+<h2>Repo Organization<a class="headerlink" href="#repo-organization" title="永久链接至标题">¶</a></h2>
+<p>The entire repo is organized as follows:</p>
+<ul class="simple">
+<li><p><strong>Data</strong> - host all datasets</p>
+<ul>
+<li><p>*CASIA-CMFD</p></li>
+<li><p>*CoMoFoD-CMFD</p></li>
+<li><p>*USCISI-CMFD</p></li>
+</ul>
+</li>
+<li><p><strong>Model</strong> - host all model files</p></li>
+<li><p><strong>ReadMe.md</strong> - this file</p></li>
+</ul>
+<p>Due to the size limit, we can’t host all dataset in repo. For those large ones, we host them externally. *indicated dataset requires to be downloaded seperately. Please refer to the document of each dataset for more detailed downloading instructions.</p>
+</div>
+<div class="section" id="python-keras-tensorflow">
+<h2>Python/Keras/Tensorflow<a class="headerlink" href="#python-keras-tensorflow" title="永久链接至标题">¶</a></h2>
+<p>The original model was trained with</p>
+<ul class="simple">
+<li><p>keras.version = 2.0.7</p></li>
+<li><p>tensorflow.version = 1.1.0</p></li>
+</ul>
+<p>we also test the repository with</p>
+<ul class="simple">
+<li><p>keras.version = 2.2.2</p></li>
+<li><p>tensorflow.version = 1.8.0</p></li>
+</ul>
+<p>Though small differences may be found, results are in general consistent.</p>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="永久链接至标题">¶</a></h2>
+<p>If you use the provided code or data in any publication, please kindly cite the following paper.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inproceedings</span><span class="p">{</span><span class="n">wu2018eccv</span><span class="p">,</span>
+  <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">BusterNet</span><span class="p">:</span> <span class="n">Detecting</span> <span class="n">Image</span> <span class="n">Copy</span><span class="o">-</span><span class="n">Move</span> <span class="n">Forgery</span> <span class="n">With</span> <span class="n">Source</span><span class="o">/</span><span class="n">Target</span> <span class="n">Localization</span><span class="p">},</span>
+  <span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Wu</span><span class="p">,</span> <span class="n">Yue</span><span class="p">,</span> <span class="ow">and</span> <span class="n">AbdAlmageed</span><span class="p">,</span> <span class="n">Wael</span> <span class="ow">and</span> <span class="n">Natarajan</span><span class="p">,</span> <span class="n">Prem</span><span class="p">},</span>
+  <span class="n">booktitle</span><span class="o">=</span><span class="p">{</span><span class="n">European</span> <span class="n">Conference</span> <span class="n">on</span> <span class="n">Computer</span> <span class="n">Vision</span> <span class="p">(</span><span class="n">ECCV</span><span class="p">)},</span>
+  <span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">2018</span><span class="p">},</span>
+  <span class="n">organization</span><span class="o">=</span><span class="p">{</span><span class="n">Springer</span><span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Name: Yue Wu</p></li>
+<li><p>Email: yue_wu[at]isi.edu</p></li>
+</ul>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="永久链接至标题">¶</a></h2>
+<p>The Software is made available for academic or non-commercial purposes only. The license is for a copy of the program for an unlimited term. Individuals requesting a license for commercial use must pay for a commercial license.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">USC</span> <span class="n">Stevens</span> <span class="n">Institute</span> <span class="k">for</span> <span class="n">Innovation</span> 
+  <span class="n">University</span> <span class="n">of</span> <span class="n">Southern</span> <span class="n">California</span> 
+  <span class="mi">1150</span> <span class="n">S</span><span class="o">.</span> <span class="n">Olive</span> <span class="n">Street</span><span class="p">,</span> <span class="n">Suite</span> <span class="mi">2300</span> 
+  <span class="n">Los</span> <span class="n">Angeles</span><span class="p">,</span> <span class="n">CA</span> <span class="mi">90115</span><span class="p">,</span> <span class="n">USA</span> 
+  <span class="n">ATTN</span><span class="p">:</span> <span class="n">Accounting</span> 
+</pre></div>
+</div>
+<p>DISCLAIMER. USC MAKES NO EXPRESS OR IMPLIED WARRANTIES, EITHER IN FACT OR BY OPERATION OF LAW, BY STATUTE OR OTHERWISE, AND USC SPECIFICALLY AND EXPRESSLY DISCLAIMS ANY EXPRESS OR IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, VALIDITY OF THE SOFTWARE OR ANY OTHER INTELLECTUAL PROPERTY RIGHTS OR NON-INFRINGEMENT OF THE INTELLECTUAL PROPERTY OR OTHER RIGHTS OF ANY THIRD PARTY. SOFTWARE IS MADE AVAILABLE AS-IS. LIMITATION OF LIABILITY. TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL USC BE LIABLE TO ANY USER OF THIS CODE FOR ANY INCIDENTAL, CONSEQUENTIAL, EXEMPLARY OR PUNITIVE DAMAGES OF ANY KIND, LOST GOODWILL, LOST PROFITS, LOST BUSINESS AND/OR ANY INDIRECT ECONOMIC DAMAGES WHATSOEVER, REGARDLESS OF WHETHER SUCH DAMAGES ARISE FROM CLAIMS BASED UPON CONTRACT, NEGLIGENCE, TORT (INCLUDING STRICT LIABILITY OR OTHER LEGAL THEORY), A BREACH OF ANY WARRANTY OR TERM OF THIS AGREEMENT, AND REGARDLESS OF WHETHER USC WAS ADVISED OR HAD REASON TO KNOW OF THE POSSIBILITY OF INCURRING SUCH DAMAGES IN ADVANCE.</p>
+<p>For commercial license pricing and annual commercial update and support pricing, please contact:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">Rakesh</span> <span class="n">Pandit</span> <span class="n">USC</span> <span class="n">Stevens</span> <span class="n">Institute</span> <span class="k">for</span> <span class="n">Innovation</span> 
+  <span class="n">University</span> <span class="n">of</span> <span class="n">Southern</span> <span class="n">California</span> 
+  <span class="mi">1150</span> <span class="n">S</span><span class="o">.</span> <span class="n">Olive</span> <span class="n">Street</span><span class="p">,</span> <span class="n">Suite</span> <span class="mi">2300</span>
+  <span class="n">Los</span> <span class="n">Angeles</span><span class="p">,</span> <span class="n">CA</span> <span class="mi">90115</span><span class="p">,</span> <span class="n">USA</span> 
+
+  <span class="n">Tel</span><span class="p">:</span> <span class="o">+</span><span class="mi">1</span> <span class="mi">213</span><span class="o">-</span><span class="mi">821</span><span class="o">-</span><span class="mi">3552</span>
+  <span class="n">Fax</span><span class="p">:</span> <span class="o">+</span><span class="mi">1</span> <span class="mi">213</span><span class="o">-</span><span class="mi">821</span><span class="o">-</span><span class="mi">5001</span> 
+  <span class="n">Email</span><span class="p">:</span> <span class="n">rakeshvp</span><span class="nd">@usc</span><span class="o">.</span><span class="n">edu</span> <span class="ow">and</span> <span class="n">ccto</span><span class="p">:</span> <span class="n">accounting</span><span class="nd">@stevens</span><span class="o">.</span><span class="n">usc</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2021, yazheng.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
